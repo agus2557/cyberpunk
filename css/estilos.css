@@ -65,9 +65,9 @@
 }
 
 /* Estilos para pantallas pequeñas */
-@media (max-width: 660px) {
+@media (max-width: 573.75px) {
   .jumbotron {
-    height: 333px;
+    height: 807.50px;
   }
 
   .image {
