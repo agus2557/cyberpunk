@@ -19,57 +19,62 @@
         margin-left: 80px;
       color: white;}
 
-      body{background-color: black;
-         
-        
-        @media (min-width: 992px) {
-          .jumbotron {
-            height: 800px;
-          }
-        
-          .contenedor-2 {
-            flex-direction: row;
-          }
-        
-          .image {
-            width: 400px;
-            height: auto;
-          }
-        
-          .texto {
-            margin-left: 80px;
-          }
-        }
-        @media (max-width: 991px) {
-          .jumbotron {
-            height: 600px;
-          }
-        
-          .contenedor-2 {
-            flex-direction: column;
-            align-items: center;
-          }
-        
-          .image {
-            width: 300px;
-            height: auto;
-          }
-        
-          .texto {
-            margin-left: 0;
-            margin-top: 20px;
-            text-align: center;
-          }
-        }
-        @media (max-width: 767px) {
-          .jumbotron {
-            height: 500px;
-          }
-        
-          .image {
-            width: 250px;
-          }
-        }
+      body{background-color: black;}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 992px) {
+  .jumbotron {
+    height: 800px;
+  }
+
+  .contenedor-2 {
+    flex-direction: row;
+  }
+
+  .image {
+    width: 400px;
+    height: auto;
+  }
+
+  .texto {
+    margin-left: 80px;
+  }
+}
+
+/* Estilos para pantallas medianas */
+@media (max-width: 991px) {
+  .jumbotron {
+    height: 600px;
+  }
+
+  .contenedor-2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image {
+    width: 300px;
+    height: auto;
+  }
+
+  .texto {
+    margin-left: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+  .jumbotron {
+    height: 500px;
+  }
+
+  .image {
+    width: 250px;
+  }
+}
+
 
         /iconos del footer/
 .iconsFooter {
@@ -77,9 +82,3 @@
     display: flex;
     justify-content: center;
 }
-
-.footerInformacion {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;}
