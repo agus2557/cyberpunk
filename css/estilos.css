@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.jumbotron {
+    background-image: url(/img/1.-Cyberpunk2077_Ultimate_Edition_PC_Time_To_Get_To_Work-6713dcbddf63d90d29d8.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;;}
+
+    .contenedor-2{
+        display: flex; 
+        align-items: center; 
+      }
+      
+      .imagen {
+        width: 400px; 
+        height: auto; /
+      }
+      
+      .texto {
+        margin-left: 20px;}
+        
+        .nosotros.html.body{ background-color: brown;}
+
+
