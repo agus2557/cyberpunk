@@ -44,6 +44,10 @@ body {
   background-color: #000000;
 }
 
+.texto {
+  color: #ffffff;
+}
+
 /* Estilos para pantallas grandes */
 @media (min-width: 992px) {
   .jumbotron {
