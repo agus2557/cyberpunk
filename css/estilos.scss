@@ -1,25 +1,62 @@
 $color1: #000000;
-$color2:#ffffff;
+$color2: #ffffff;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin responsive-image($width-large, $width-medium, $width-small) {
+  width: $width-large;
+  height: auto;
+
+  @media (max-width: 991px) {
+    width: $width-medium;
+  }
+
+  @media (max-width: 573.75px) {
+    width: $width-small;
+  }
+}
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* Clase base para border-radius */
+.border-radius-5 {
+  @include border-radius(5px);
+}
+
+.border-radius-8 {
+  @include border-radius(8px);
+}
+
+.border-radius-10 {
+  @include border-radius(10px);
+}
+
 .jumbotron {
-    background-image: url(../img/1.-Cyberpunk2077_Ultimate_Edition_PC_Time_To_Get_To_Work-6713dcbddf63d90d29d8.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 600px;;}
+  background-image: url(../img/1.-Cyberpunk2077_Ultimate_Edition_PC_Time_To_Get_To_Work-6713dcbddf63d90d29d8.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  @extend .border-radius-10;
+}
 
-    .contenedor-2{
-        display: flex; 
-        align-items: left; 
-      }
-      
-      image {
-        width: 400px; 
-        height: auto; }
-      
+.contenedor-2 {
+  display: flex; 
+  align-items: left;
+  @extend .border-radius-5; 
+}
 
-body{background-color:$color1;}
+.image {
+  @include responsive-image(400px, 300px, 250px);
+  @extend .border-radius-8;  
+}
+
+body {
+  background-color: $color1;
+}
 
 /* Estilos para pantallas grandes */
 @media (min-width: 992px) {
@@ -31,17 +68,9 @@ body{background-color:$color1;}
     flex-direction: row;
   }
 
-  .image {
-    width: 400px;
-    height: auto;
-  
-    .texto {
-        margin-left: 80px;
-        color:$color2;
-      }
-
   .texto {
     margin-left: 80px;
+    color: $color2;
   }
 }
 
@@ -54,11 +83,6 @@ body{background-color:$color1;}
   .contenedor-2 {
     flex-direction: column;
     align-items: center;
-  }
- 
-  .image {
-    width: 300px;
-    height: auto;
   }
 
   .texto {
@@ -74,14 +98,16 @@ body{background-color:$color1;}
     height: 807.50px;
   }
 
-  .image {
-    width: 250px;
+  .texto {
+    margin-left: 0;
+    margin-top: 20px;
+    text-align: center;
   }
 }
 
-
-        /*iconos del footer*/
+/* Iconos del footer */ 
 .iconsFooter {
-    align-items: center;
-    display: flex;
-    justify-content: center}
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

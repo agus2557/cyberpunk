@@ -1,0 +1,4 @@
+-agregue las "keywords" y la descripción de las paginas a todos los HTML
+-y también hice una paleta de dos colores (negro y blanco) con scss para los textos y para el color del fonde del body
+
+

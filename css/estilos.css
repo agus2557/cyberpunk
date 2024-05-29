@@ -1,5 +1,18 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* Clase base para border-radius */
+.border-radius-5, .contenedor-2 {
+  border-radius: 5px;
+}
+
+.border-radius-8, .image {
+  border-radius: 8px;
+}
+
+.border-radius-10, .jumbotron {
+  border-radius: 10px;
+}
+
 .jumbotron {
   background-image: url(../img/1.-Cyberpunk2077_Ultimate_Edition_PC_Time_To_Get_To_Work-6713dcbddf63d90d29d8.jpg);
   background-size: cover;
@@ -12,14 +25,19 @@
   align-items: left;
 }
 
-image {
+.image {
   width: 400px;
   height: auto;
 }
-
-.texto {
-  margin-left: 80px;
-  color: white;
+@media (max-width: 991px) {
+  .image {
+    width: 300px;
+  }
+}
+@media (max-width: 573.75px) {
+  .image {
+    width: 250px;
+  }
 }
 
 body {
@@ -34,12 +52,9 @@ body {
   .contenedor-2 {
     flex-direction: row;
   }
-  .image {
-    width: 400px;
-    height: auto;
-  }
   .texto {
     margin-left: 80px;
+    color: #ffffff;
   }
 }
 /* Estilos para pantallas medianas */
@@ -50,10 +65,6 @@ body {
   .contenedor-2 {
     flex-direction: column;
     align-items: center;
-  }
-  .image {
-    width: 300px;
-    height: auto;
   }
   .texto {
     margin-left: 0;
@@ -66,11 +77,13 @@ body {
   .jumbotron {
     height: 807.5px;
   }
-  .image {
-    width: 250px;
+  .texto {
+    margin-left: 0;
+    margin-top: 20px;
+    text-align: center;
   }
 }
-/*iconos del footer*/
+/* Iconos del footer */
 .iconsFooter {
   align-items: center;
   display: flex;
